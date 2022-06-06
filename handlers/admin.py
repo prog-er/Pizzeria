@@ -20,7 +20,7 @@ class FSMAdmin(StatesGroup):
 async def make_changes_command(message: types.Message):
     global ID
     ID = message.from_user.id
-    await bot.send_message(message.from_user.id, 'Выберите нужный пункт!!!', reply_markup=admin_kb.button_case_admin)
+    await bot.send_message(message.from_user.id, 'Чего желаете?', reply_markup=admin_kb.button_case_admin)
     await message.delete()
 
 # Начало длиалога загрузки нового пункта меню
